@@ -1,0 +1,62 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3 class="text-center mb-4">Registrar Usuário</h3>
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group mb-3">
+                <label for="name">Nome</label>
+                <input type="text" [(ngModel)]="user.name" class="form-control" id="name" name="name"
+                    placeholder="Entre com seu nome" required required required minlength="3" maxlength="50"
+                    #name="ngModel">
+                <!-- Mensagens de erro do nome -->
+                <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger mt-2">
+                    <div *ngIf="name.errors['minlength']">O nome deve ter no mínimo 3 caracteres</div>
+                    <div *ngIf="name.errors['maxlength']">O nome deve ter no máximo 50 caracteres</div>
+                </div>
+
+                <div [hidden]="!name.pristine" class="alert alert-danger mt-2">Nome é obrigatório</div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" [(ngModel)]="user.email" class="form-control" id="email" name="email"
+                    placeholder="Entre com seu endereço de email" required email #email="ngModel">
+
+                <!-- Mensagens de erro do email -->
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger mt-2">
+                    <div *ngIf="email.errors['email']">Formato de email inválido</div>
+                </div>
+                <div [hidden]="!email.pristine" class="alert alert-danger mt-2">Email é obrigatório</div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="password">Senha</label>
+                <input type="password" [(ngModel)]="user.password" class="form-control" id="password" name="password"
+                    placeholder="Entre com sua senha" required required minlength="6" maxlength="20"
+                    #password="ngModel">
+                <!-- Mensagens de erro  validação de senha -->
+                <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger mt-2">
+                    <div *ngIf="password.errors['minlength']">A senha deve ter no mínimo 6 caracteres</div>
+                    <div *ngIf="password.errors['maxlength']">A senha deve ter no máximo 20 caracteres</div>
+                </div>
+
+                <div [hidden]="!password.pristine" class="alert alert-danger mt-2">Senha é obrigatória</div>
+
+            </div>
+
+            <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-roxo btn-block mt-3">
+                Registrar
+            </button>
+
+            <!-- Mensagem de sucesso registro novo -->
+            <div *ngIf="successMessage" class="alert alert-success mt-3" role="alert">
+                {{ successMessage }}
+            </div>
+
+            <!-- Mensagem de erro registro -->
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3" role="alert">
+                {{ errorMessage }}
+            </div>
+
+        </form>
+    </div>
+</div>

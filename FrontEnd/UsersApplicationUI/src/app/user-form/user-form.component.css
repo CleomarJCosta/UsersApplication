@@ -1,0 +1,46 @@
+.btn-roxo {
+    background-color: #820ad1;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-roxo:hover {
+    background-color: #6b09ad;
+
+}
+
+.form-control:focus {
+    border-color: #820ad1;
+    box-shadow: 0 0 0 0.2rem rgba(130, 10, 209, 0.25);
+}
+
+.alert-danger {
+    font-size: 14px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+input::placeholder {
+    color: #ccc;
+}
+
+
+.mt-auto {
+    margin-top: auto;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body" style="background-color: hsl(192, 84%, 24%);">
+          <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <ul class="text-center list-inline py-3">
+            <li class="list-inline-item">
+              <button (click)="onListUsersClick()" class="btn btn-roxo">
+                <span class="material-icons" style="vertical-align: middle;">group</span>
+                Lista Usuários
+              </button>
+            </li>
+
+            <li class="list-inline-item">
+              <a routerLink="/register" class="btn btn-roxo">
+                <span class="material-icons" style="vertical-align: middle;">person_add</span>
+                Registra Usuário
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
