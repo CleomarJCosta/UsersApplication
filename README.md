@@ -13,8 +13,8 @@ Orientações :
    - Clicar primeiro em registrar Usuario. 
    - Validações de email, senha e nome .
    - A Aplicação pedirá registro
-   - depois de registrado e credencias salvas clicar em listar usuarios . A Aplicação pedirá login.
-   - para sair da tela de listagem basta clicar em sair logo abaixo da tabela.
+   - Depois de registrado e credencias salvas clicar em listar usuarios . A Aplicação pedirá login.
+   - Para sair da tela de listagem basta clicar em sair logo abaixo da tabela.
 
 
 
